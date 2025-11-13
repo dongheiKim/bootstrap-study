@@ -1,24 +1,146 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap-study</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
-    />
-  </head>
-  <style>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bootstrap-study</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <style>
+      body {
+        overflow-x: hidden;
+        padding-top: 75px;
+      }
+      /* 사이드바 스타일 */
+      .sidebar {
+        width: 280px;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: #343a40;
+        color: white;
+        padding-top: 1rem;
+        overflow-y: scroll; 
+        scrollbar-width: thin;
+      }
+
+      .sidebar::-webkit-scrollbar {
+        width: 8px;
+      }
+      .sidebar::-webkit-scrollbar-thumb {
+        background-color: #6c757d;
+        border-radius: 4px;
+      }
+
+      .sidebar a {
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 8px 20px;
+        transition: background-color 0.2s;
+      }
+
+      .sidebar a:hover {
+        background-color: #495057;
+      }
+
+      .sidebar .sub-link {
+        padding-left: 40px;
+        font-size: 0.9rem;
+        color: #adb5bd;
+      }
+
+      .sidebar .sub-link:hover {
+        background-color: #495057;
+        color: #fff;
+      }
+
+      .sidebar a.active {
+        background-color: #0d6efd;
+        color: #fff;
+        font-weight: bold;
+      }
+
+      .header{
+          position: fixed;
+          top: 0;
+          width: 100%;
+        
+      }
     .card-img-top {
       height: 15rem;
       object-fit: cover;
     }
-  </style>
+    </style>
+  </head>
   <body>
-    <div class="container">
+
+    <!--  사이드바 -->
+    <div class="sidebar">
+      <h4 class="text-center mb-4">homepage</h4>
+
+      <a href="#section1">한식</a>
+      <a href="#section1-example1" class="sub-link">예제 1</a>
+      <a href="#section1-example2" class="sub-link">예제 2</a>
+      <a href="#section1-example3" class="sub-link">예제 3</a>
+      <a href="#section1-example4" class="sub-link">예제 4</a>
+      <a href="#section1-example5" class="sub-link">예제 5</a>
+
+      <a href="#section2">일식</a>
+      <a href="#section2-example1" class="sub-link">예제 1</a>
+      <a href="#section2-example2" class="sub-link">예제 2</a>
+      <a href="#section2-example3" class="sub-link">예제 3</a>
+      <a href="#section2-example4" class="sub-link">예제 4</a>
+      <a href="#section2-example5" class="sub-link">예제 5</a>
+
+      <a href="#section3">중식</a>
+      <a href="#section3-example1" class="sub-link">예제 1</a>
+      <a href="#section3-example2" class="sub-link">예제 2</a>
+      <a href="#section3-example3" class="sub-link">예제 3</a>
+      <a href="#section3-example4" class="sub-link">예제 4</a>
+      <a href="#section3-example5" class="sub-link">예제 5</a>
+
+    
+      <a href="#section4">양식</a>
+      <a href="#section4-example1" class="sub-link">예제 1</a>
+      <a href="#section4-example2" class="sub-link">예제 2</a>
+      <a href="#section4-example3" class="sub-link">예제 3</a>
+      <a href="#section4-example4" class="sub-link">예제 4</a>
+      <a href="#section4-example5" class="sub-link">예제 5</a>
+
+      <a href="#section5">나머지</a>
+      <a href="#section5-example1" class="sub-link">예제 1</a>
+      <a href="#section5-example2" class="sub-link">예제 2</a>
+      <a href="#section5-example3" class="sub-link">예제 3</a>
+      <a href="#section5-example4" class="sub-link">예제 4</a>
+      <a href="#section5-example5" class="sub-link">예제 5</a>
+
+      
+    </div>
+      </section>
+    </div>  
+  <!-- header start-->
+   
+     <div class="header">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+          <img src="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" font->
+          Bootstrap-study-World
+          </a>
+          <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sign.html">Sign</a>
+          </li><!-- 로그인, 회원가입 파일은 없음. 누르면 못찾는다고 뜸.-->
+          </ul>  
+      </nav>
+     </div>
+  
+  <!-- header end-->
+          <div class="container">
       <div class="row">
         <div class="col-md-3">
           <div class="card" style="width: 18rem">
@@ -73,6 +195,66 @@
               <h5 class="card-title">맨슨 MB-2</h5>
               <p class="card-text">$5,499</p>
               <a href="#" class="btn btn-primary">구매~</a>
+  <!-- footer start-->    
+  <div class="container">
+    <footer class="py-5">
+      <!-- footer-top -->
+      <div class="row py-5">
+        <div class="col-2">
+          <h5>Left Section1</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+        <div class="col-2">
+          <h5>Left Section2</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+        <div class="col-2 offset-6">
+          <h5>Right Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- footer-bottom -->
+      <div class="row py-5 border-top">
+        <div class="col d-flex flex-column flex-sm-row justify-content-between">
+          <!-- copyright -->
+          <span>&copy; 2025 Company, Inc. All rights reserved.</span>
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#termsModal">
+            OOO License
+          </button>
+          <!-- Modal -->
+          <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="termsModalLabel">OOO License</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  OOO 라이센스에 대한 설명...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
