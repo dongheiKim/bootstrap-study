@@ -1,201 +1,202 @@
 <!DOCTYPE html>
 <html lang="ko">
- <head>
+
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>bootstrap-study</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
-    <style>
-      body {
-        overflow-x: hidden;
-        padding-top: 75px;
-      }
-      /* 사이드바 스타일 */
-      .sidebar {
-        width: 280px;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        background-color: #343a40;
-        color: white;
-        padding-top: 1rem;
-        overflow-y: scroll; 
-        scrollbar-width: thin;
-      }
+  <style>
+    body {
+      overflow-x: hidden;
+      padding-top: 75px;
+    }
 
-      .sidebar::-webkit-scrollbar {
-        width: 8px;
-      }
-      .sidebar::-webkit-scrollbar-thumb {
-        background-color: #6c757d;
-        border-radius: 4px;
-      }
+    /* 사이드바 스타일 */
+    .sidebar {
+      width: 280px;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      background-color: #343a40;
+      color: white;
+      padding-top: 1rem;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+    }
 
-      .sidebar a {
-        color: white;
-        text-decoration: none;
-        display: block;
-        padding: 8px 20px;
-        transition: background-color 0.2s;
-      }
+    .sidebar::-webkit-scrollbar {
+      width: 8px;
+    }
 
-      .sidebar a:hover {
-        background-color: #495057;
-      }
+    .sidebar::-webkit-scrollbar-thumb {
+      background-color: #6c757d;
+      border-radius: 4px;
+    }
 
-      .sidebar .sub-link {
-        padding-left: 40px;
-        font-size: 0.9rem;
-        color: #adb5bd;
-      }
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 8px 20px;
+      transition: background-color 0.2s;
+    }
 
-      .sidebar .sub-link:hover {
-        background-color: #495057;
-        color: #fff;
-      }
+    .sidebar a:hover {
+      background-color: #495057;
+    }
 
-      .sidebar a.active {
-        background-color: #0d6efd;
-        color: #fff;
-        font-weight: bold;
-      }
+    .sidebar .sub-link {
+      padding-left: 40px;
+      font-size: 0.9rem;
+      color: #adb5bd;
+    }
 
-      .header{
-          position: fixed;
-          top: 0;
-          width: 100%;
-        
-      }
+    .sidebar .sub-link:hover {
+      background-color: #495057;
+      color: #fff;
+    }
+
+    .sidebar a.active {
+      background-color: #0d6efd;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    .header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+
+    }
+
     .card-img-top {
       height: 15rem;
       object-fit: cover;
     }
-    </style>
-  </head>
-  <body>
+  </style>
+</head>
 
-    <!--  사이드바 -->
-    <div class="sidebar">
-      <h4 class="text-center mb-4">homepage</h4>
+<body>
 
-      <a href="#section1">한식</a>
-      <a href="#section1-example1" class="sub-link">예제 1</a>
-      <a href="#section1-example2" class="sub-link">예제 2</a>
-      <a href="#section1-example3" class="sub-link">예제 3</a>
-      <a href="#section1-example4" class="sub-link">예제 4</a>
-      <a href="#section1-example5" class="sub-link">예제 5</a>
+  <!--  사이드바 -->
+  <div class="sidebar">
+    <h4 class="text-center mb-4">homepage</h4>
 
-      <a href="#section2">일식</a>
-      <a href="#section2-example1" class="sub-link">예제 1</a>
-      <a href="#section2-example2" class="sub-link">예제 2</a>
-      <a href="#section2-example3" class="sub-link">예제 3</a>
-      <a href="#section2-example4" class="sub-link">예제 4</a>
-      <a href="#section2-example5" class="sub-link">예제 5</a>
+    <a href="#section1">한식</a>
+    <a href="#section1-example1" class="sub-link">예제 1</a>
+    <a href="#section1-example2" class="sub-link">예제 2</a>
+    <a href="#section1-example3" class="sub-link">예제 3</a>
+    <a href="#section1-example4" class="sub-link">예제 4</a>
+    <a href="#section1-example5" class="sub-link">예제 5</a>
 
-      <a href="#section3">중식</a>
-      <a href="#section3-example1" class="sub-link">예제 1</a>
-      <a href="#section3-example2" class="sub-link">예제 2</a>
-      <a href="#section3-example3" class="sub-link">예제 3</a>
-      <a href="#section3-example4" class="sub-link">예제 4</a>
-      <a href="#section3-example5" class="sub-link">예제 5</a>
+    <a href="#section2">일식</a>
+    <a href="#section2-example1" class="sub-link">예제 1</a>
+    <a href="#section2-example2" class="sub-link">예제 2</a>
+    <a href="#section2-example3" class="sub-link">예제 3</a>
+    <a href="#section2-example4" class="sub-link">예제 4</a>
+    <a href="#section2-example5" class="sub-link">예제 5</a>
 
-    
-      <a href="#section4">양식</a>
-      <a href="#section4-example1" class="sub-link">예제 1</a>
-      <a href="#section4-example2" class="sub-link">예제 2</a>
-      <a href="#section4-example3" class="sub-link">예제 3</a>
-      <a href="#section4-example4" class="sub-link">예제 4</a>
-      <a href="#section4-example5" class="sub-link">예제 5</a>
+    <a href="#section3">중식</a>
+    <a href="#section3-example1" class="sub-link">예제 1</a>
+    <a href="#section3-example2" class="sub-link">예제 2</a>
+    <a href="#section3-example3" class="sub-link">예제 3</a>
+    <a href="#section3-example4" class="sub-link">예제 4</a>
+    <a href="#section3-example5" class="sub-link">예제 5</a>
 
-      <a href="#section5">나머지</a>
-      <a href="#section5-example1" class="sub-link">예제 1</a>
-      <a href="#section5-example2" class="sub-link">예제 2</a>
-      <a href="#section5-example3" class="sub-link">예제 3</a>
-      <a href="#section5-example4" class="sub-link">예제 4</a>
-      <a href="#section5-example5" class="sub-link">예제 5</a>
 
-      
-    </div>
-      </section>
-    </div>  
+    <a href="#section4">양식</a>
+    <a href="#section4-example1" class="sub-link">예제 1</a>
+    <a href="#section4-example2" class="sub-link">예제 2</a>
+    <a href="#section4-example3" class="sub-link">예제 3</a>
+    <a href="#section4-example4" class="sub-link">예제 4</a>
+    <a href="#section4-example5" class="sub-link">예제 5</a>
+
+    <a href="#section5">나머지</a>
+    <a href="#section5-example1" class="sub-link">예제 1</a>
+    <a href="#section5-example2" class="sub-link">예제 2</a>
+    <a href="#section5-example3" class="sub-link">예제 3</a>
+    <a href="#section5-example4" class="sub-link">예제 4</a>
+    <a href="#section5-example5" class="sub-link">예제 5</a>
+
+
+  </div>
+  </section>
+  </div>
   <!-- header start-->
-   
-     <div class="header">
-      <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-          <img src="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" font->
+
+  <div class="header">
+    <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="https://getbootstrap.kr/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24"
+            class="d-inline-block align-text-top" font->
           Bootstrap-study-World
-          </a>
-          <ul class="nav justify-content-center">
+        </a>
+        <ul class="nav justify-content-center">
           <li class="nav-item">
             <a class="nav-link" href="login.html">Login</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sign.html">Sign</a>
           </li><!-- 로그인, 회원가입 파일은 없음. 누르면 못찾는다고 뜸.-->
-          </ul>  
-      </nav>
-     </div>
-  
+        </ul>
+    </nav>
+  </div>
+
   <!-- header end-->
-          <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://cdn.shopify.com/s/files/1/0659/3966/9171/files/LPS6DCW25VCNH1_1_Body.png?v=1744041817&width=720"
-              class="card-img-top"
-              alt="이미지"
-            />
-            <div class="card-body">
-              <h5 class="card-title">깁슨 레스폴 빈티지</h5>
-              <p class="card-text">$2,799</p>
-              <a href="#" class="btn btn-primary">구매~</a>
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem">
+          <img
+            src="https://cdn.shopify.com/s/files/1/0659/3966/9171/files/LPS6DCW25VCNH1_1_Body.png?v=1744041817&width=720"
+            class="card-img-top" alt="이미지" />
+          <div class="card-body">
+            <h5 class="card-title">깁슨 레스폴 빈티지</h5>
+            <p class="card-text">$2,799</p>
+            <a href="#" class="btn btn-primary">구매~</a>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://m.guitarct.co.kr/web/product/big/202201/30cf080bfeda2e52838a69c95031331a.jpg"
-              class="card-img-top"
-              alt="이미지"
-            />
-            <div class="card-body">
-              <h5 class="card-title">펜더 아메리칸 스트랫</h5>
-              <p class="card-text">$3,899</p>
-              <a href="#" class="btn btn-primary">구매~</a>
-            </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem">
+          <img src="https://m.guitarct.co.kr/web/product/big/202201/30cf080bfeda2e52838a69c95031331a.jpg"
+            class="card-img-top" alt="이미지" />
+          <div class="card-body">
+            <h5 class="card-title">펜더 아메리칸 스트랫</h5>
+            <p class="card-text">$3,899</p>
+            <a href="#" class="btn btn-primary">구매~</a>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/629474/1446567/restricted"
-              class="card-img-top"
-              alt="이미지"
-            />
-            <div class="card-body">
-              <h5 class="card-title">PRS SE CE24</h5>
-              <p class="card-text">$1,599</p>
-              <a href="#" class="btn btn-primary">구매~</a>
-            </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem">
+          <img src="https://collectionapi.metmuseum.org/api/collection/v1/iiif/629474/1446567/restricted"
+            class="card-img-top" alt="이미지" />
+          <div class="card-body">
+            <h5 class="card-title">PRS SE CE24</h5>
+            <p class="card-text">$1,599</p>
+            <a href="#" class="btn btn-primary">구매~</a>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card" style="width: 18rem">
-            <img
-              src="https://guitar.com/wp-content/uploads/2022/12/Manson-Guitar-Works-MB-2-HERO@2560x1625-696x442.jpg"
-              class="card-img-top"
-              alt="이미지"
-            />
-            <div class="card-body">
-              <h5 class="card-title">맨슨 MB-2</h5>
-              <p class="card-text">$5,499</p>
-              <a href="#" class="btn btn-primary">구매~</a>
-  <!-- footer start-->    
+      </div>
+      <div class="col-md-3">
+        <div class="card" style="width: 18rem">
+          <img src="https://guitar.com/wp-content/uploads/2022/12/Manson-Guitar-Works-MB-2-HERO@2560x1625-696x442.jpg"
+            class="card-img-top" alt="이미지" />
+          <div class="card-body">
+            <h5 class="card-title">맨슨 MB-2</h5>
+            <p class="card-text">$5,499</p>
+            <a href="#" class="btn btn-primary">구매~</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer start-->
   <div class="container">
     <footer class="py-5">
       <!-- footer-top -->
@@ -259,21 +260,17 @@
           </div>
         </div>
       </div>
-    </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+    integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
